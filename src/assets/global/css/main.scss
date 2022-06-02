@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+:root {
+  --themeColor: #e87a90;
+  --text: #337267;
+  --white:#fff;
+  --orange:rgb(235, 143, 6);
+  --blue:#3498db;
+  --bgColor:#dcdcdc;
+  --transparent:#ffff0000;
+  --silber: #c0c0c0;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  cursor: url("../../img/flesh.png"), auto;
+  box-sizing: border-box;
+}
+h1,h2,i {
+  color: var(--themeColor);
+}
+h1{
+  font-size: 1.5rem;
+}
+.layout {
+  // margin-top: 4rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+ 
+  &.h2 {
+    align-self: flex-start;
+    margin-bottom: 5%;
+  }
+}
+
+.recht {
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  align-items: center;
+}
+.pkBg{
+  background-color: var(--themeColor);
+  color: var(--white);
+}
+
+a{
+  text-decoration: none;
+}
+// -----------button style-----------
+@media only screen and (max-width: 768px) {
+  .layout {
+    flex-wrap: wrap;
+  }
+  .left {
+    background-color: rgba(40, 101, 183, 0);
+  }
+  .recht {
+    z-index: 10;
+  }
+}

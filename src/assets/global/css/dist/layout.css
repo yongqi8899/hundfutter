@@ -1,0 +1,231 @@
+:root {
+  --pink: #e87a90;
+  --text: #337267;
+  --white:#fff;
+  --orange:rgb(235, 143, 6);
+  --blue:#3498db;
+  --bgColor:rgba(252, 252, 252, 0.8)
+  --transparent:rgba(252, 252, 252, 0) ;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  cursor: url("../../img/flesh.png"), auto;
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+h2, i {
+  color: var(--pink);
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: var(--pink);
+}
+
+.nav {
+  height: 2rem;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.left.h2 {
+  align-self: flex-start;
+  margin-bottom: 5%;
+}
+
+.recht {
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  align-items: center;
+}
+
+.pkBg {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.selected {
+  color: var(--pink);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .layout {
+    flex-wrap: wrap;
+  }
+
+  .left {
+    background-color: rgba(40, 101, 183, 0);
+  }
+
+  .pkBg {
+    background-color: var(--transparent);
+    color: var(--pink);
+  }
+
+  .recht {
+    z-index: 10;
+  }
+}
+:root {
+  --pink:#E87A90;
+  --text:#337267;
+}
+
+nav {
+  grid-area: nav;
+  background-color: rgba(83, 183, 63, 0);
+}
+
+.left {
+  grid-area: left;
+  height: 80vh;
+}
+
+.recht {
+  background-color: rgba(184, 83, 184, 0);
+  grid-area: recht;
+  position: relative;
+  height: 100%;
+}
+
+.recht-area {
+  background-color: rgba(182, 34, 37, 0);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  z-index: 20;
+  position: sticky;
+}
+
+[class="fas fa-paw"], [class="fas fa-bars"] {
+  color: var(--pink);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+li a, .Einkaufswagen {
+  background-color: rgba(18, 168, 162, 0);
+  color: var(--pink);
+  text-decoration: none;
+  padding: 5px;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  margin-right: 1rem;
+}
+
+a:hover {
+  background-color: var(--pink);
+  color: white;
+}
+
+.dropdown button {
+  display: none;
+}
+
+.logo {
+  align-self: center;
+  justify-content: center;
+}
+
+footer {
+  color: var(--pink);
+  grid-area: footer;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 45%;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% auto 10%;
+    background-color: rgba(220, 165, 95, 0);
+    grid-template-areas: "nav" "left" "footer";
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  .left {
+    grid-area: left;
+  }
+
+  .recht {
+    background-color: rgba(184, 83, 184, 0);
+    grid-area: left;
+    z-index: 10;
+  }
+
+  .dropdown button {
+    display: block;
+    background-color: white;
+  }
+
+  .dropbtn {
+    color: var(--pink);
+    display: flex;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 10rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: var(--pink);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--pink);
+    color: white;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover {
+    background-color: var(--pink);
+    color: white;
+  }
+
+  .dropbtn:hover {
+    background-color: #dfd5d5;
+  }
+}

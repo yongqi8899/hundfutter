@@ -34,7 +34,7 @@ export default {
 }
 .kontakt{
   position: relative;
-  height: 100vh;
+  height: 80vh;
 }
 #form 
 {

@@ -87,6 +87,7 @@ nav.dropdown {
     justify-content: center;
     .search {
       margin-right: 3rem;
+    
     }
   }
   .right {

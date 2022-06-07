@@ -5,33 +5,31 @@
       name="input"
       class="input"
       id="search-input"
-      v-model="keyword"
+      v-model="input"
     />
-    <button type="reset" class="search" id="search-btn" @click="search"></button>
+    <button type="reset" class="search" id="search-btn"></button>
   </form>
 </template>
 
 <script>
+import { getProdukt } from "@/api/produkt.js";
+
 export default {
-  name: "",
+  name: "my-search",
   data() {
     return {
-       keyword:''
+      input: "",
+      items: [],
     };
   },
-  methods:{
-      search(){
-      let keyword = this.keyword
-      if(keyword.trim()){
-        this.$store.dispatch('searchAjax',keyword)
-      }else{
-        alert('Wir haben nicht gefunden')
-      }
-
-      this.keyword = ''
-    }
+  created() {
+    this.items = getProdukt();
   },
-  props: {},
+  computed: {
+    searchData: function () {
+      return this.items.filter((v) => v.name.includes(this.input));
+    },
+  },
   mounted() {
     const input = document.getElementById("search-input");
     const searchBtn = document.getElementById("search-btn");
@@ -50,7 +48,7 @@ export default {
 #content {
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 300px;
 }
 
 #content.on {
@@ -64,7 +62,7 @@ export default {
   animation-iteration-count: 1;
 }
 
-input {
+#content input {
   box-sizing: border-box;
   width: 30px;
   height: 30px;
@@ -157,7 +155,7 @@ input {
   transform: rotate(-45deg);
 }
 
-.square {
+#content .square {
   box-sizing: border-box;
   padding: 0 20px 0 10px;
   width: 300px;

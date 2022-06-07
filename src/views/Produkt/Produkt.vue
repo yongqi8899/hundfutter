@@ -30,7 +30,6 @@ export default {
     }
   },
   created(){
-    // 创建组件时获取数据（调用接口）
     this.produkte = getProdukt()
   },
   methods: {

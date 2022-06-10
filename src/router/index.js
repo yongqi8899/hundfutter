@@ -7,7 +7,7 @@ import DetailView from '../views/Detail/index.vue'
 import KontaktView from '../views/Kontakt/Kontaktrechts.vue'
 import OrderView from '../views/Einkaufswagen/index.vue'
 import LoginView from '../views/Anmelden/LoginView.vue'
-import RegistrierenView from '../views/Anmelden/RegistrierenView.vue'
+import RegistrierenView from '../views/Register/index.vue'
 
 Vue.use(VueRouter)
 

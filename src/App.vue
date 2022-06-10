@@ -14,7 +14,7 @@
 
 <script>
 import NavBottom from "./views/NavBottom.vue";
-import Footer from "./views/Footer.vue";
+import Footer from "./views/Footer";
 
 export default {
   components: {

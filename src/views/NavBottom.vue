@@ -16,7 +16,7 @@
       </div>
       <div class="wrapper-right">
         <div class="search">
-          <my-search />
+          <router-link to="/search"><my-search /></router-link>
         </div>
         <div class="right">
           <div class="login">
@@ -87,7 +87,16 @@ nav.dropdown {
     justify-content: center;
     .search {
       margin-right: 3rem;
-    
+      a {
+        text-decoration: none;
+        &:hover{
+          background-color: transparent;
+        }
+      }
+      .active{
+        border-bottom: 0px solid transparent;
+        background-color: transparent;
+      }
     }
   }
   .right {

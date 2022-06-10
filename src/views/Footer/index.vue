@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-       <a href="http://yongqi.ml/">@ Yongqi Zhang</a>
+       <a href="http://yongqi.ml/" target="_blank">@ Yongqi Zhang</a>
   </div>
 </template>
 

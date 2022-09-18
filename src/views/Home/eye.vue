@@ -11,19 +11,13 @@ export default {
   props:['eyeHeight'],
    mounted() {
       const eyes = document.querySelectorAll('.eye')
-			//给body添加鼠标移动事件
 			document.body.addEventListener('mousemove', move)
 			function move() {
-				//将两个眼球进行便利
 				eyes.forEach(eye =>{
-					//获取x轴
 					let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
-					//获取y轴
 					let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
-					//利用Math.atan2来算出x轴和y轴的射线之间的平面角度
 					let atan = Math.atan2(-(event.pageX - x), -(event.pageY - y))
 					let rot = (atan * (180 / Math.PI) * -1) + 0
-					//赋值
 					eye.style.transform = `rotate(${rot}deg)`
 				})
 			}

@@ -1,13 +1,13 @@
 <template>
   <div class="footer">
-       <a href="http://yongqi.ml/" target="_blank">@ Yongqi Zhang</a>
+    <a href="http://yongqi.ml/" target="_blank">@ Yongqi Zhang</a>
   </div>
 </template>
 
 <script>
 export default {
-name:"Footer"
-}
+  name: "Footer",
+};
 </script>
 
 <style lang="scss" scoped>
@@ -23,9 +23,8 @@ name:"Footer"
   text-align: center;
   line-height: 2rem;
   z-index: 100;
-
-}    
-a{
+}
+a {
   color: var(--themeColor);
-  }
+}
 </style>

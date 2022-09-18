@@ -9,10 +9,10 @@
         <h2>€ {{ produkt.price }}</h2>
 
         <div class="btn">
-          <router-link :to="'/detail/' + produkt.id" >
-             <my-btn :title="'MEHR'"  @click.native="showProdukte"> </my-btn>
+          <router-link :to="'/detail/' + produkt.id">
+            <my-btn :title="'MEHR'" @click.native="showProdukte"> </my-btn>
           </router-link>
-          <my-btn :title="'IN DEN EINKAUFSWAGEN'"  @click="doAddToCard" >
+          <my-btn :title="'IN DEN EINKAUFSWAGEN'" @click="doAddToCard">
           </my-btn>
         </div>
       </div>
@@ -20,27 +20,27 @@
   </div>
 </template>
 <script>
-import { getProdukt, addShopcart } from '@/api/produkt'
+import { getProdukt, addShopcart } from "@/api/produkt";
 export default {
   data() {
     return {
       cur: 0,
       timer: null,
-      produkte:[]
-    }
+      produkte: [],
+    };
   },
-  created(){
-    this.produkte = getProdukt()
+  created() {
+    this.produkte = getProdukt();
   },
   methods: {
-   doAddToCard(){
+    doAddToCard() {
       addShopcart({
         ...this.produkt,
-        count:this.$store.state.count,
-      })
-    }
-  }
-}
+        count: this.$store.state.count,
+      });
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .content {
@@ -51,7 +51,7 @@ export default {
   .card {
     width: 100%;
     height: 100%;
-   border-radius: 50px;
+    border-radius: 50px;
     background-color: var(--bgColor);
     img {
       width: 100%;

@@ -1,23 +1,14 @@
 <template>
-    <div>
-        <Einkaufswagen/>
-    </div>
+  <div>
+    <Einkaufswagen />
+  </div>
 </template>
 
 <script>
-import Einkaufswagen from './Einkaufswagen.vue'
+import Einkaufswagen from "./Einkaufswagen.vue";
 export default {
-data(){
-    return{
-
-    }
-},
-components:{
-    Einkaufswagen
-}
-}
+  components: {
+    Einkaufswagen,
+  },
+};
 </script>
-
-<style>
-
-</style>

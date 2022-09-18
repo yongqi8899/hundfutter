@@ -11,7 +11,7 @@
           <span>{{ v.price }}</span>
           <lable>
             <button>+</button>
-            {{v.count}}
+            {{ v.count }}
             <button>-</button>
           </lable>
         </div>
@@ -30,32 +30,30 @@
 </template>
 
 <script>
-import { addShopcart,getShopcart, getShopcartGoodsById } from '@/api/produkt'
-import {mapGetters} from 'vuex'
+import { addShopcart, getShopcart, getShopcartGoodsById } from "@/api/produkt";
+import { mapGetters } from "vuex";
 
 export default {
   data() {
     return {
-      count:'0',
-      cartDatas:[]
+      count: "0",
+      cartDatas: [],
     };
   },
-  created(){
-    this.cartDatas=getShopcart()
+  created() {
+    this.cartDatas = getShopcart();
   },
-  computed:{
-    ...mapGetters(['cartDatas']),
-      incrementC() {
-        addShopcart+=1
-    this.count += 1
+  computed: {
+    ...mapGetters(["cartDatas"]),
+    incrementC() {
+      addShopcart += 1;
+      this.count += 1;
+    },
+    decrementC() {
+      if (this.count > 0) {
+        this.count -= 1;
+      }
+    },
   },
-  decrementC() {
-    if (this.count > 0) {
-    this.count -= 1
-    }
-  }
-  }
 };
 </script>
-
-<style></style>

@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import AboutRecht from "./AboutRecht.vue"
-import AboutLeft from "./AboutLeft.vue"
+import AboutRecht from "./AboutRecht.vue";
+import AboutLeft from "./AboutLeft.vue";
 export default {
   name: "AboutView",
   components: {
@@ -20,14 +20,15 @@ export default {
   },
 };
 </script>
+
 <style scoped>
-.left{
+.left {
   width: 50vw;
-  position:sticky;
+  position: sticky;
 }
 @media only screen and (max-width: 1024px) {
-  .left{
-  width: 100vw;
-}
+  .left {
+    width: 100vw;
+  }
 }
 </style>

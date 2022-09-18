@@ -4,7 +4,7 @@ Vue.use(Vuex)
 
 const state = {
   count:0,
-  cartAddData:[],//购物车数据
+  cartAddData:[],
 }
 const mutations = {
   INCREMENT(state){

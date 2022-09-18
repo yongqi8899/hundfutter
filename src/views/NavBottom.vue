@@ -23,7 +23,7 @@
             <router-link to="/login">Login </router-link>
             <span>|</span>
             <router-link to="/registrieren">Registrieren</router-link>
-          </div >
+          </div>
           <i class="icofont-ui-cart icofont-3x" @click="toCart"></i>
           <!-- <span>{{totalCount}}</span> -->
         </div>
@@ -32,7 +32,7 @@
   </div>
 </template>
 <script>
-import {mapGetters} from "vuex"
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -44,15 +44,14 @@ export default {
       ],
     };
   },
-  computed:{ 
-    ...mapGetters(['totalCount']),
-   
+  computed: {
+    ...mapGetters(["totalCount"]),
   },
-  methods:{
-     toCart(){
-      this.$router.push('./order')
-    }
-  }
+  methods: {
+    toCart() {
+      this.$router.push("./order");
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -89,11 +88,11 @@ nav.dropdown {
       margin-right: 3rem;
       a {
         text-decoration: none;
-        &:hover{
+        &:hover {
           background-color: transparent;
         }
       }
-      .active{
+      .active {
         border-bottom: 0px solid transparent;
         background-color: transparent;
       }
@@ -130,8 +129,8 @@ li {
 
 @media only screen and (max-width: 1024px) {
   .active {
-  border-bottom: none;
-}
+    border-bottom: none;
+  }
   nav.dropdown {
     .dropbtn {
       display: inline-block;

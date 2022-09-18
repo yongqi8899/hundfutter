@@ -2,7 +2,7 @@
   <div>
     <div class="produkt-container" v-if="produkt && produkt.imgs">
       <!-- <i class="icofont-circled-left icofont-3x"></i> -->
-      <img 
+      <img
         v-for="(img, j) in produkt.imgs"
         :key="j"
         :src="img"
@@ -64,41 +64,37 @@ h2 {
   display: flex;
   position: relative;
   img {
-    width:37rem; 
-    height:37rem;
+    width: 37rem;
+    height: 37rem;
   }
-  .icofont-circled-left{
-  position: absolute;
-  left: 10px;
-  top:50%;
-  transition: (-50%);
+  .icofont-circled-left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transition: (-50%);
   }
-  .banner-circle{
+  .banner-circle {
     position: absolute;
     bottom: 10px;
     left: 50%;
   }
-  .icofont-circled-right{
+  .icofont-circled-right {
     position: absolute;
     right: 10px;
-    top:50%;
-    
+    top: 50%;
   }
-  .icofont-3x{
+  .icofont-3x {
     color: var(--bgColor);
-    &:hover{
-    color: var(--themeColor);
-    
+    &:hover {
+      color: var(--themeColor);
     }
   }
 }
 
 @media only screen and (max-width: 768px) {
   img {
-  
-    width:20rem; 
-    height:20rem;
-  
+    width: 20rem;
+    height: 20rem;
   }
   #content-wrapper {
     flex-wrap: wrap;

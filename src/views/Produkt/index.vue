@@ -1,14 +1,11 @@
 <template>
   <div>
-  
-      <Produkt />
-   
-    
+    <Produkt />
   </div>
 </template>
 
 <script>
-import Produkt from "./Produkt.vue"
+import Produkt from "./Produkt.vue";
 export default {
   name: "ProduktView",
   components: {
@@ -16,6 +13,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-
-</style>

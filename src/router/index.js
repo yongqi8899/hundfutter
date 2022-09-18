@@ -36,8 +36,6 @@ const routes = [
   },
   {
     path: '/detail/:id',
-    // path:'/detail',
-    // query:{id:detailsId},
     name: 'detail',
     component: DetailView
   },

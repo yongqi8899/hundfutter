@@ -37,7 +37,6 @@ export default {
   }
   .inhalt {
     margin: 7rem 10% 4rem 10%;
-    // margin: 0 auto;
   }
 }
 </style>
